@@ -105,7 +105,7 @@ Workflow file: `.github/workflows/ci-cd.yml`
 
 ## Example Output
 ![Kubernetes Services Screenshot] (screenshots/<img width="761" height="223" alt="Screenshot 2025-07-23 193730" src="https://github.com/user-attachments/assets/523b9706-6a94-4a5f-8305-a3a1c2eedf3f" />
-.png)
+)
 
 ## Authors
 - Pallapothu Yegneswar Guptha
