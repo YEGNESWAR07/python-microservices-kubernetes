@@ -1,14 +1,3 @@
-## CI/CD Pipeline
-
-This project includes a GitHub Actions workflow for CI/CD automation:
-- **Build & Lint:** Installs dependencies and lints Python code with flake8.
-- **Docker Build & Push:** Builds Docker images for both services and pushes them to Docker Hub (configure your Docker Hub credentials as repository secrets: `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`).
-- **Deploy:** Placeholder for automated deployment to a cloud Kubernetes cluster (add your `kubectl` commands as needed).
-
-Workflow file: `.github/workflows/ci-cd.yml`
-
-      - run: pip install flake8 && flake8 service1/app.py service2/app.py
-
 # Microservices with Docker & Kubernetes
 
 ## Overview
@@ -18,7 +7,6 @@ This project demonstrates a simple microservices architecture using Python (Flas
 
 ## Table of Contents
 - [Overview](#overview)
-- [Architecture](#architecture)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Testing](#testing)
@@ -29,11 +17,6 @@ This project demonstrates a simple microservices architecture using Python (Flas
 
 ---
 
-## Architecture
-![Microservices Architecture](https://raw.githubusercontent.com/microservices-demo/microservices-demo/master/docs/architecture.png)
-*Example architecture for microservices on Kubernetes (replace with your own if desired)*
-
----
 
 ## Project Structure
 ```
@@ -118,54 +101,11 @@ Workflow file: `.github/workflows/ci-cd.yml`
 - Automated deployment and scaling with Kubernetes Deployments and Services
 - Inter-service communication within the cluster
 
-## Architecture Diagram
 
-![Microservices Architecture](https://raw.githubusercontent.com/microservices-demo/microservices-demo/master/docs/architecture.png)
-
-*Example architecture for microservices on Kubernetes (replace with your own if desired)*
-
-## Project Structure
-```
-requirements.txt
-k8s/
-  service.yaml
-  service1-deployment.yaml
-  service2-deployement.yaml
-service1/
-  app.py
-  Dockerfile
-service2/
-  app.py
-  Dockerfile
-```
-
-## Getting Started
-
-### Prerequisites
-- Docker Desktop with Kubernetes enabled (or Minikube)
-- kubectl
-
-### Build Docker Images
-```powershell
-copy requirements.txt service1\
-copy requirements.txt service2\
-docker build -t service1:latest .\service1
-docker build -t service2:latest .\service2
-```
-
-### Deploy to Kubernetes
-```powershell
-kubectl apply -f .\k8s\
-```
-
-### Check Status
-```powershell
-kubectl get pods
-kubectl get services
-```
 
 ## Example Output
-![Kubernetes Services Screenshot](./k8s_services_screenshot.png)
+![Kubernetes Services Screenshot](<img width="761" height="223" alt="Screenshot 2025-07-23 193730" src="https://github.com/user-attachments/assets/d5ec63cc-065c-42b7-8be2-56f4e60e971c" />
+)
 
 ## Authors
 - Pallapothu Yegneswar Guptha
